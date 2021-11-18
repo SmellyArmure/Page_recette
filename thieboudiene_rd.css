@@ -1,0 +1,99 @@
+* {overflow: auto}
+
+/* Style par défaut : pour smartphone */
+
+body {background-color:rgb(54, 19, 19);
+    font-family: 'Trebuchet MS'; margin: 0;}
+
+.centre {text-align: center;
+       width: 100%;
+       display:block;}
+
+p.etiquette {background-color:rosybrown;
+          border: 2px solid black; color: black;
+          padding: 8px 18px; margin-top: 0px;
+          margin-bottom: 0px; font-weight: 'bold';
+          font-size: 16; display: inline-block;}
+div.etiquette {margin-bottom: -20px;
+               margin-top: 20px; }
+
+p.commentaire {text-align: center;
+             margin: 0 3% 10px 3%; display: inline-block;
+             font-size: 13px; font-family: Arial;}
+
+div.contenu {background-color: white;
+             margin: 0 10px 10px 10px;
+             padding: 10px 10px;
+             min-width: 240px;
+             box-shadow: 0px 0px 30px 10px rgba(255, 0, 0, 0.5);
+             overflow: visible;}
+h1 {text-align: center; margin-bottom: 13px;}
+div.separateur {border: 10; background-color: red;
+                width: 60%; height: 2px; display: block;
+                margin: auto;}
+
+div.inform {position: relative}
+img.inform {display: block; max-height: 200px; min-height: 150px;
+            object-fit: cover; background-color: lightcoral;}
+table.inform {position: absolute; bottom: 0px; width: 100%;
+              color: white; background-color: #ad1818c0;
+              height: 20px;}
+table.inform th {text-align: center; font-size: 14px;
+                 vertical-align: top; padding-top: 2px;}
+table.inform td {text-align: center; font-size: 12px;
+                 vertical-align: bottom; padding-bottom: 2px;}
+
+div.colonne {margin-top: 5px}
+div.colonne h2 {text-align: center; text-transform: uppercase;
+                font-size: 16px; border-bottom: 3px solid maroon;
+              padding-bottom: 7px;}
+div.colonne1 {width: 100%; display: inline-block; margin-right: 0%;}
+
+div.ingredients p {border: 1px solid black; color: white;
+    padding: 4px 3px; font-size: 12px; background-color: darkred;
+    margin: 2px 0px; width: 45%; max-height:13px; display: inline-block;
+    overflow: hidden;}
+div.ingredients {max-height: 150px; overflow-x:scroll;}
+div.colonne2 {width: 100%;}
+
+table.preparation {background-color: white;}
+table.preparation tr {height: 35px;}
+table.preparation td {margin: 0px; padding: 0px; border-color: red;}
+table.preparation td.num {vertical-align: top; padding: 5px 0px;
+                          margin: 0px}
+table.preparation p {display: block; margin: 3px 8px;}
+table.preparation p.num {text-align: center; vertical-align: bottom;
+      background-color: rosybrown; width: 25px; height: 25px;
+      margin: 0px; border: 2px solid black; border-radius: 50%;
+      color:black; padding: 1px; box-sizing: border-box;}
+
+/* Correction des styles pour ordinateur */
+@media only screen and (min-width: 760px) {
+  p.etiquette {background-color: red;}
+  div.etiquette {min-width: 472px;
+                 margin-bottom: -20px;
+                 margin-top: 40px;}
+  div.contenu {min-width: 350px; max-width: 750px;
+               margin: 0 5% 30px 5%;
+               padding: 30px 30px; overflow: auto;}
+  p.commentaire {text-align: center; max-width: 400px;
+                margin: 0 15% 30px 15%; display: inline-block;
+                font-size: 13px; font-family: Arial; }
+  img.inform {max-height: 350px; min-height: 200px;}
+
+  table.inform th {font-size: 18px; padding-top: 4px;}
+  table.inform td {font-size: 13px; padding-bottom: 4px;}
+  table.inform {height: 40px;}
+  div.ingredients p {padding: 6px 3px; font-size: 14px; margin: 5px 0px;
+    width: 100%; max-height:none; display: inline-block; overflow: auto;}
+  div.colonne {margin-top: 20px; overflow: auto;}
+  div.colonne2 {float: right; width: 61%;}
+  div.colonne1 {width: 35%; margin-right: 2%;}
+    div.ingredients {max-height: none; overflow-x: auto;}
+}
+
+/* cas des écrans trop grands*/
+@media only screen and (min-width: 900px) {
+  div.contenu { margin-left: auto; margin-right: auto;}
+
+}
